@@ -2,8 +2,6 @@
 
 namespace IikoServer\Api\Objects;
 
-use function Symfony\Component\Translation\t;
-
 /**
  * Class StoreObject
  * @package IikoServer\Api\Objects

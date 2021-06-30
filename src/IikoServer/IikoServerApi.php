@@ -17,6 +17,7 @@ abstract class IikoServerApi
     protected $suppliers_endpoint = '/resto/api/suppliers';
     protected $departments_endpoint = '/resto/api/corporation/departments';
     protected $products_endpoint = '/resto/api/v2/entities/products/list';
+    protected $persons_endpoint = '/resto/api/employees';
 
     const VERSION = '1.0.0';
 

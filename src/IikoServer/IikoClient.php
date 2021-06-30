@@ -5,6 +5,7 @@ namespace IikoServer\Api;
 
 
 use IikoServer\Api\Methods\Departments;
+use IikoServer\Api\Methods\Persons;
 use IikoServer\Api\Methods\Products;
 use IikoServer\Api\Methods\Stores;
 use IikoServer\Api\Methods\Suppliers;
@@ -17,7 +18,8 @@ class IikoClient extends IikoServerApi implements IikoConnections
         Suppliers,
         IikoRequests,
         Departments,
-        Products;
+        Products,
+        Persons;
 
     /**
      * IikoClient constructor.
