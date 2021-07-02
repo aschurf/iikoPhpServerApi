@@ -62,6 +62,7 @@ class InvoiceItemObject
         $this->vatSum = $vatSum;
         $this->discountSum = $discountSum;
         $this->num = $num;
+
     }
 
 

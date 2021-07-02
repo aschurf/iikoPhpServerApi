@@ -121,5 +121,6 @@ trait Invoices
             }
         }
         return $query;
+
     }
 }

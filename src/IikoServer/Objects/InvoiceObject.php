@@ -43,6 +43,7 @@ class InvoiceObject
         $this->conception = $conception;
         $this->status = $status;
         $this->distributionAlgorithm = $distributionAlgorithm;
+
     }
 
 
