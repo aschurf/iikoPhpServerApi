@@ -156,7 +156,9 @@ class IikoInvoice
             $response = new SimpleXMLElement($resultIIKO);
             return ['valid' => strval($response->valid), 'warning' => strval($response->warning), 'errorMessage' => strval($response->errorMessage)];
         } catch (\Exception $e) {
+
             throw new InvoicesException($resultIIKO);
+
         }
     }
 
@@ -167,12 +169,13 @@ class IikoInvoice
     private function validate(){
         $ref = new ReflectionClass($this);
         $props   = $ref->getProperties(ReflectionProperty::IS_PROTECTED);
+
         foreach ($props as $prop) {
             if ($this->{$prop->getName()} == null){
                 throw new InvoicesException('Required parameter '.$prop->getName().' is undefined');
             }
 
-            foreach ($this->items as $item){
+            foreach ($this->items as $item ){
                 foreach ($this->itemsData as $iData){
                     if (!array_key_exists($iData, $item)){
                         throw new InvoicesException('Required parameter '.$iData.' is undefined');

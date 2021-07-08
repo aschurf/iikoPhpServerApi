@@ -43,10 +43,12 @@ class IikoClient extends IikoServerApi implements IikoConnections
 
     public function close()
     {
+
         $close = curl_init($this->serverUrl."/resto/api/logout?key=".$this->key."");
         curl_setopt($close, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($close, CURLOPT_HEADER, 0);
         curl_exec($close);
         curl_close($close);
+
     }
 }
