@@ -7,6 +7,7 @@ namespace IikoServer\Api\Methods;
 use DateTime;
 use Exception;
 use IikoServer\Api\Exceptions\InvoicesException;
+use IikoServer\Api\IikoInvoice;
 use IikoServer\Api\IikoRequests;
 use IikoServer\Api\Objects\InvoiceItemObject;
 use IikoServer\Api\Objects\InvoiceObject;
@@ -122,5 +123,10 @@ trait Invoices
         }
         return $query;
 
+    }
+
+
+    public function createOutgoingInvoice(){
+        return new IikoInvoice($this->serverUrl, $this->key);
     }
 }

@@ -8,7 +8,7 @@ use IikoServer\Api\Exceptions\IikoApiException;
 
 trait IikoRequests
 {
-    protected function request(string $requestUrl,string $key, string $method, array $body = [], string $params = null){
+    protected function request(string $requestUrl,string $key, string $method, $body = [], string $params = null){
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -21,8 +21,8 @@ trait IikoRequests
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => $method,
         ));
-
-        count($body) > 0 ? curl_setopt($curl, CURLOPT_POSTFIELDS,  json_encode($body)) : null;
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $body);
+        //count($body) > 0 ? curl_setopt($curl, CURLOPT_POSTFIELDS,  json_encode($body)) : null;
 
         $response = curl_exec($curl);
         curl_close($curl);
