@@ -38,6 +38,7 @@ abstract class IikoCardApi
         $this->validatePassword();
 
         $this->getToken();
+
     }
 
 

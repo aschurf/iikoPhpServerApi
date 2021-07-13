@@ -35,6 +35,7 @@ abstract class IikoServerApi
      */
     public function __construct(string $login = null, string $password = null, string $serverUrl = null){
 
+
         $this->login = $login ?? $_ENV[self::IIKO_LOGIN_ENV_NAME];
         $this->validateLogin();
 
@@ -45,6 +46,7 @@ abstract class IikoServerApi
         $this->validateIikoHost();
 
         $this->authorize();
+
     }
 
     private function authorize()
