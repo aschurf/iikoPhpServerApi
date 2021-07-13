@@ -34,4 +34,8 @@ class IikoApiException extends Exception
     public static function incorrectBool($message): self {
         return new static('Request failed. '.$message);
     }
+
+    public static function cardApiIncorrect(string $message){
+        return new static('Request failed. '.$message);
+    }
 }

@@ -23,6 +23,7 @@ class IikoClient extends IikoServerApi implements IikoConnections
         Persons,
         Invoices {
         Stores::request insteadof Suppliers;
+        Suppliers::request insteadof Stores;
         Departments::request insteadof IikoRequests;
         Products::request insteadof Departments;
         Persons::request insteadof Products;
