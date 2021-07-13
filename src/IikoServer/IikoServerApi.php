@@ -3,7 +3,6 @@
 
 namespace IikoServer\Api;
 
-use Dotenv\Dotenv;
 use IikoServer\Api\Exceptions\IikoApiException;
 abstract class IikoServerApi
 {
@@ -35,9 +34,6 @@ abstract class IikoServerApi
      * @param string $password
      */
     public function __construct(string $login = null, string $password = null, string $serverUrl = null){
-
-        $dotenv = Dotenv::createImmutable('../../', '.env');
-        $dotenv->load();
 
         $this->login = $login ?? $_ENV[self::IIKO_LOGIN_ENV_NAME];
         $this->validateLogin();
