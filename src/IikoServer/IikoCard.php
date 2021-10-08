@@ -27,7 +27,9 @@ class IikoCard extends IikoCardApi
      */
     public function __construct(string $userId = null, string $userPassword = null)
     {
+
         parent::__construct($userId, $userPassword);
+
     }
 
 
