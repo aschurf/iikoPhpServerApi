@@ -10,6 +10,7 @@ use IikoServer\Api\Methods\Persons;
 use IikoServer\Api\Methods\Products;
 use IikoServer\Api\Methods\Stores;
 use IikoServer\Api\Methods\Suppliers;
+use IikoServer\Api\Methods\OlapV2;
 
 class IikoClient extends IikoServerApi implements IikoConnections
 {
@@ -18,6 +19,7 @@ class IikoClient extends IikoServerApi implements IikoConnections
     use Stores,
         Suppliers,
         IikoRequests,
+        OlapV2,
         Departments,
         Products,
         Persons,
