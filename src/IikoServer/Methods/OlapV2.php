@@ -13,7 +13,7 @@ trait OlapV2
     /**
      * Return OLAP report JSON
      * https://ru.iiko.help/articles/#!api-documentations/olap-2
-     * @param array $body 
+     * @param string $body 
      */
     public function getOlapReport($body) : string {
 
