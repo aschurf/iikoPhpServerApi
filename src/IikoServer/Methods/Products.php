@@ -63,7 +63,7 @@ trait Products
                 $item['mainUnit'],
                 $item['type'],
                 $item['unitWeight'],
-                $item['unitCapacity'],
+                $item['unitCapacity']
             );
             if (count($item['containers']) > 0){
                 foreach ($item['containers'] as $cont){
@@ -77,7 +77,7 @@ trait Products
                         $cont['containerWeight'],
                         $cont['fullContainerWeight'],
                         $cont['deleted'],
-                        $cont['useInFront'],
+                        $cont['useInFront']
                     );
                 }
             }
