@@ -29,7 +29,7 @@ trait CardOrganizations
               $j->name,
               $j->networkId,
               $j->phone,
-              $j->organizationType,
+              $j->organizationType
             );
         }
 

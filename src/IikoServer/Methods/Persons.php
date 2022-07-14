@@ -43,7 +43,7 @@ trait Persons
                 strval($person->mainRoleCode),
                 strval($person->cardNumber),
                 strval($person->snils),
-                strval($person->deleted),
+                strval($person->deleted)
             );
         }
 

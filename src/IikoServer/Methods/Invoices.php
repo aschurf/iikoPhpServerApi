@@ -23,7 +23,7 @@ trait Invoices
     private $getInvoicesParams = [
         'from' => null,
         'to' => null,
-        'supplierId' => [],
+        'supplierId' => []
     ];
 
     /**
