@@ -14,6 +14,7 @@ class InvoiceObject
     public $defaultStore;
     public $dateIncoming;
     public $documentNumber;
+    public $incomingDocumentNumber;
     public $conception;
     public $status;
     public $distributionAlgorithm;
@@ -31,7 +32,7 @@ class InvoiceObject
      * @param $status
      * @param $distributionAlgorithm
      */
-    public function __construct($id, $transportInvoiceNumber, $incomingDate, $supplier, $defaultStore, $dateIncoming, $documentNumber, $conception, $status, $distributionAlgorithm)
+    public function __construct($id, $transportInvoiceNumber, $incomingDate, $supplier, $defaultStore, $dateIncoming, $documentNumber, $incomingDocumentNumber, $conception, $status, $distributionAlgorithm)
     {
         $this->id = $id;
         $this->transportInvoiceNumber = $transportInvoiceNumber;
@@ -40,6 +41,7 @@ class InvoiceObject
         $this->defaultStore = $defaultStore;
         $this->dateIncoming = $dateIncoming;
         $this->documentNumber = $documentNumber;
+        $this->incomingDocumentNumber = $incomingDocumentNumber;
         $this->conception = $conception;
         $this->status = $status;
         $this->distributionAlgorithm = $distributionAlgorithm;
