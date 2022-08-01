@@ -64,6 +64,7 @@ trait Invoices
                 strval($inv->defaultStore),
                 strval($inv->dateIncoming),
                 strval($inv->documentNumber),
+                strval($inv->incomingDocumentNumber),
                 strval($inv->conception),
                 strval($inv->status),
                 strval($inv->distributionAlgorithm)
